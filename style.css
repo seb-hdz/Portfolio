@@ -1,0 +1,116 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+a,
+ul {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* My styles */
+:root {
+  --clr-bg: #30336b;
+  --clr-prim: #ffbe76;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: #fff;
+}
+
+body > header {
+  position: sticky;
+  top: 0;
+  background-color: var(--clr-bg);
+}
+
+nav > ul {
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  max-width: 67.5rem;
+  margin-inline: auto;
+}
+
+main {
+  width: 80vw;
+  margin-inline: auto;
+  max-width: 67.5rem;
+}
+
+footer {
+  background-color: var(--clr-bg);
+  padding: 1rem;
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+}
+
+.nav__second {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.greetings {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-block: 2.5rem;
+}
+
+.greetings__first {
+  width: 18.75rem;
+}
+
+.greetings__buttonGroup {
+  display: flex;
+  gap: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+
+.greetings__buttonGroup > button {
+  padding-inline: 1.5rem;
+  padding-block: 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--clr-prim);
+  color: #000;
+  cursor: pointer;
+  width: 8.125rem;
+}
+
+.greetings__picture {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 48em) {
+  .greetings {
+    flex-flow: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .greetings__first {
+    text-align: center;
+  }
+
+  .greetings__buttonGroup {
+    justify-content: center;
+  }
+}
