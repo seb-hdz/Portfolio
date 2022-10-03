@@ -9,9 +9,11 @@
   </head>
   <body>
     <header>
+      <a class="skip" href="#main">Jump to main content</a>
+      <a class="skip" href="#footer">Jump to footer</a>
       <nav>
         <ul>
-          <a href="#">home</a>
+          <a class="active-link" href="/">home</a>
           <div class="nav__second">
             <a href="#">blog</a>
             <a href="#">projects</a>
@@ -19,7 +21,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <section class="greetings">
         <div class="greetings__first">
           <h1>Hi! I'm [name]</h1>
@@ -40,7 +42,7 @@
       </section>
       <section></section>
     </main>
-    <footer>
+    <footer id="footer">
         <p>Lorem ipsum dolor sit amet.</p>
     </footer>
   </body>

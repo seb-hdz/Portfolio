@@ -21,10 +21,30 @@ ul {
   color: inherit;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Accesibility */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
 /* My styles */
 :root {
-  --clr-bg: #30336b;
+  --clr-bg: #1b2430;
   --clr-prim: #ffbe76;
+}
+
+* {
+  scrollbar-color: var(--clr-bg) var(--clr-bg);
+  scrollbar-width: thin;
 }
 
 body {
@@ -32,10 +52,27 @@ body {
   color: #fff;
 }
 
-body > header {
+.skip {
+  text-align: center;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  translate: 0 -100%;
+  transition: translate 100ms ease-in-out;
+  background-color: var(--clr-bg);
+}
+
+.skip:focus {
+  translate: 0 0;
+}
+
+nav {
   position: sticky;
   top: 0;
   background-color: var(--clr-bg);
+  z-index: 1001;
 }
 
 nav > ul {
@@ -45,6 +82,10 @@ nav > ul {
   justify-content: space-between;
   max-width: 67.5rem;
   margin-inline: auto;
+}
+
+.active-link {
+  border-bottom: 0.1875rem solid var(--clr-prim);
 }
 
 main {
@@ -94,12 +135,22 @@ footer {
   color: #000;
   cursor: pointer;
   width: 8.125rem;
+  transition: filter 150ms ease-in-out;
+}
+
+.greetings__buttonGroup > button:hover {
+  filter: brightness(120%);
+}
+
+.greetings__buttonGroup > button:active {
+  filter: brightness(90%);
 }
 
 .greetings__picture {
   border-radius: 50%;
 }
 
+/* Reponsive layout */
 @media screen and (max-width: 48em) {
   .greetings {
     flex-flow: column-reverse;
@@ -114,3 +165,5 @@ footer {
     justify-content: center;
   }
 }
+
+/* Animations */
