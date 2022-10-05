@@ -45,6 +45,7 @@ select {
   /* Vars */
   --border-rad: 0.75rem;
   --max-w: 67.5rem;
+  --min-w: 16rem;
 }
 
 html {
@@ -123,16 +124,19 @@ main {
   justify-content: space-around;
   gap: 3rem;
   margin-block: 2.5rem;
+  margin-inline: 2rem;
 }
 
 .greetings__first {
-  width: 18.75rem;
+  min-width: var(--min-w);
+  margin-inline: 2rem;
 }
 
 .greetings__buttonGroup {
   display: flex;
   gap: 1.5rem;
   margin-block-start: 1.5rem;
+  width: 100%;
 }
 
 button,
@@ -152,18 +156,17 @@ button,
 }
 
 .btn-border {
-  background-color: var(--clr-bg);
+  background-color: transparent;
   border: 0.1rem solid #fff;
   color: #fff;
-  border-radius: var(--border-rad);
 }
 
-button,
+button:hover,
 .btn:hover {
   filter: brightness(120%);
 }
 
-button,
+button:active,
 .btn:active {
   filter: brightness(90%);
 }
@@ -173,30 +176,48 @@ button,
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-  gap: 2rem;
   margin-inline: 2rem;
   margin-block-start: 3.5rem;
 }
 
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+  margin-block-start: 2rem;
+}
+
 .projects__card {
-  background-color: var(--clr-bg);
   border-radius: var(--border-rad);
-  /* padding: 1.5rem; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  height: var(--min-w);
+
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
 .projects__cardImage {
   width: 100%;
   display: block;
-  border-radius: var(--border-rad) var(--border-rad) 0 0;
+  border-radius: var(--border-rad);
 }
 
 .projects__cardFooter {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
+
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(0deg, black 0%, transparent 100%);
+  align-items: end;
+
+  border-radius: var(--border-rad);
 }
 
 footer {
@@ -229,6 +250,12 @@ footer {
 
   .greetings__buttonGroup {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 20.625em) {
+  .nav__second {
+    gap: 0.5rem;
   }
 }
 
