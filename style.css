@@ -59,7 +59,7 @@ html {
 
 body {
   background-color: var(--clr-bg);
-  color: #fff;
+  color: white;
 }
 
 .skip {
@@ -90,7 +90,7 @@ nav {
 nav > ul {
   padding-block: 1rem;
   padding-inline: 2rem;
-  color: #fff;
+  color: white;
   display: flex;
   justify-content: space-between;
   max-width: var(--max-w);
@@ -152,13 +152,13 @@ button,
 .btn-primary {
   background-color: var(--clr-prim);
   border: none;
-  color: #000;
+  color: black;
 }
 
 .btn-border {
   background-color: transparent;
-  border: 0.1rem solid #fff;
-  color: #fff;
+  border: 0.1rem solid white;
+  color: white;
 }
 
 button:hover,
@@ -180,6 +180,41 @@ button:active,
   margin-block-start: 3.5rem;
 }
 
+.projects__header {
+  display: flex;
+  gap: 2rem;
+  margin-block-end: 3rem;
+}
+
+.projects__headerSecond {
+  width: 100%;
+}
+
+.projects__searchBar {
+  width: 100%;
+  border-radius: var(--border-rad);
+  padding-block: 0.25rem;
+  border: 0.0625rem solid white;
+  background-color: transparent;
+  color: white;
+  padding-inline: 1rem;
+}
+
+.projects__searchBar:focus {
+  outline: none;
+}
+
+.projects__buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-block-start: 1rem;
+  width: 100%;
+  overflow-x: auto;
+
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
+}
+
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -189,7 +224,7 @@ button:active,
 
 .projects__card {
   border-radius: var(--border-rad);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
   position: relative;
   height: var(--min-w);
 
@@ -197,6 +232,12 @@ button:active,
   justify-content: center;
 
   overflow: hidden;
+}
+
+.projects__card:hover {
+  scale: 1.05;
+  border: 0.0625rem solid white;
+  transition: scale 100ms ease-in-out;
 }
 
 .projects__cardImage {
@@ -250,6 +291,11 @@ footer {
 
   .greetings__buttonGroup {
     justify-content: center;
+  }
+
+  .projects__header {
+    flex-flow: column;
+    gap: 1.5rem;
   }
 }
 

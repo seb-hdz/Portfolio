@@ -38,16 +38,25 @@
         <img class="greetings__picture" src="frame1.png" alt="" />
       </section>
       <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <form action="">
-          <label for="search">Search projects</label>
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="search..."
-          />
-        </form>
+        <header class="projects__header">
+          <h2>Projects</h2>
+          <div class="projects__headerSecond">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="search..."
+              class="projects__searchBar"
+            />
+            <div class="projects__buttonGroup">
+              <button class="btn-primary">All</button>
+              <button class="btn-border">HTML</button>
+              <button class="btn-border">CSS</button>
+              <button class="btn-border">JavaScript</button>
+            </div>
+          </div>
+        </header>
+
         <div class="projects__grid">
           <article class="projects__card">
             <img
@@ -138,18 +147,14 @@
     </main>
     <footer id="footer">
       <a href="https://www.github.com/seb-hdz" target="_blank" rel="noreferrer"
-        ><img
-          src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg"
-          width="32"
-          height="32"
-          alt="github"
+        ><img src="assets/icons/GitHub.svg" width="32" height="32" alt="github"
       /></a>
       <a
         href="https://www.linkedin.com/in/sebastian-eduardo-hidalgo-díaz-143548188/"
         target="_blank"
         rel="noreferrer"
         ><img
-          src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg"
+          src="assets/icons/LinkedIn.svg"
           width="32"
           height="32"
           alt="linkedin"
