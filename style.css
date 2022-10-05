@@ -38,8 +38,17 @@ select {
 
 /* My styles */
 :root {
+  /* Colors */
   --clr-bg: #1b2430;
   --clr-prim: #ffbe76;
+
+  /* Vars */
+  --border-rad: 0.75rem;
+  --max-w: 67.5rem;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -62,6 +71,7 @@ body {
   translate: 0 -100%;
   transition: translate 100ms ease-in-out;
   background-color: var(--clr-bg);
+  z-index: 1002;
 }
 
 .skip:focus {
@@ -69,37 +79,36 @@ body {
 }
 
 nav {
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
   background-color: var(--clr-bg);
   z-index: 1001;
 }
 
 nav > ul {
-  padding: 1rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  max-width: 67.5rem;
+  max-width: var(--max-w);
   margin-inline: auto;
+}
+
+nav a {
+  padding-block-end: 0.25rem;
 }
 
 .active-link {
-  border-bottom: 0.1875rem solid var(--clr-prim);
+  border-bottom: 0.125rem solid var(--clr-prim);
 }
 
 main {
-  width: 80vw;
   margin-inline: auto;
-  max-width: 67.5rem;
-}
-
-footer {
-  background-color: var(--clr-bg);
-  padding: 1rem;
-  position: sticky;
-  bottom: 0;
-  text-align: center;
+  max-width: var(--max-w);
+  padding-block-start: 3.5rem;
+  padding-block-end: 2rem;
 }
 
 .nav__second {
@@ -126,23 +135,36 @@ footer {
   margin-block-start: 1.5rem;
 }
 
-.greetings__buttonGroup > button {
+button,
+.btn {
   padding-inline: 1.5rem;
   padding-block: 0.6rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: var(--clr-prim);
-  color: #000;
+  border-radius: var(--border-rad);
   cursor: pointer;
-  width: 8.125rem;
   transition: filter 150ms ease-in-out;
+  display: block;
 }
 
-.greetings__buttonGroup > button:hover {
+.btn-primary {
+  background-color: var(--clr-prim);
+  border: none;
+  color: #000;
+}
+
+.btn-border {
+  background-color: var(--clr-bg);
+  border: 0.1rem solid #fff;
+  color: #fff;
+  border-radius: var(--border-rad);
+}
+
+button,
+.btn:hover {
   filter: brightness(120%);
 }
 
-.greetings__buttonGroup > button:active {
+button,
+.btn:active {
   filter: brightness(90%);
 }
 
@@ -150,8 +172,52 @@ footer {
   border-radius: 50%;
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 2rem;
+  margin-inline: 2rem;
+  margin-block-start: 3.5rem;
+}
+
+.projects__card {
+  background-color: var(--clr-bg);
+  border-radius: var(--border-rad);
+  /* padding: 1.5rem; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.projects__cardImage {
+  width: 100%;
+  display: block;
+  border-radius: var(--border-rad) var(--border-rad) 0 0;
+}
+
+.projects__cardFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+footer {
+  background-color: var(--clr-bg);
+  padding: 1rem;
+  /* position: fixed; */
+  width: 100%;
+  /* bottom: 0; */
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
 /* Reponsive layout */
 @media screen and (max-width: 48em) {
+  .nav__second {
+    gap: 1rem;
+  }
+
   .greetings {
     flex-flow: column-reverse;
     gap: 1.5rem;
