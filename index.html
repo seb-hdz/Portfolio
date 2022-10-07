@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body>
     <header>
@@ -31,21 +31,25 @@
             inventore?
           </p>
           <div class="greetings__buttonGroup">
-            <a href="#projects" class="btn btn-primary">To Projects</a>
-            <a href="#" class="btn btn-border">Contact Me!</a>
+            <a href="#projects" class="btn btn-primary">To projects</a>
+            <a href="#" class="btn btn-border">Contact me!</a>
           </div>
         </div>
-        <img class="greetings__picture" src="frame1.png" alt="" />
+        <img
+          class="greetings__picture"
+          src="assets/pictures/frame1.png"
+          alt="Me"
+        />
       </section>
       <section id="projects" class="projects">
         <header class="projects__header">
           <h2>Projects</h2>
           <input
             type="text"
-            name="search"
-            id="search"
-            placeholder="Search..."
+            placeholder="Search projects by..."
             class="projects__searchBar"
+            id="searchBar"
+            name="searchBar"
           />
           <div class="projects__buttonGroup">
             <button class="btn-primary">All</button>
@@ -123,20 +127,49 @@
           </article>
         </div>
       </section>
+      <section class="contact">
+        <h2>Contact me!</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, earum!
+        </p>
+        <form class="contact__form">
+          <div class="contact__formContent">
+            <div class="contact__formInputs">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name..."
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email..."
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+          </div>
+          <button class="btn-primary">Send</button>
+        </form>
+      </section>
     </main>
     <footer id="footer">
       <a href="https://www.github.com/seb-hdz" target="_blank" rel="noreferrer"
-        ><img src="assets/icons/GitHub.svg" width="32" height="32" alt="github"
+        ><img src="assets/icons/GitHub.svg" alt="github"
       /></a>
       <a
         href="https://www.linkedin.com/in/sebastian-eduardo-hidalgo-díaz-143548188/"
         target="_blank"
         rel="noreferrer"
-        ><img
-          src="assets/icons/LinkedIn.svg"
-          width="32"
-          height="32"
-          alt="linkedin"
+        ><img src="assets/icons/LinkedIn.svg" alt="linkedin"
       /></a>
     </footer>
   </body>
