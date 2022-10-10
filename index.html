@@ -16,7 +16,7 @@
           <a class="active-link" href="/">home</a>
           <div class="nav__second">
             <a href="#projects">projects</a>
-            <a href="#">contact</a>
+            <a href="#contact">contact</a>
             <a href="#">resume</a>
           </div>
         </ul>
@@ -24,7 +24,7 @@
     </header>
     <main id="main">
       <section class="greetings">
-        <div class="greetings__first">
+        <div class="greetings__first anim-slideInRight">
           <h1>Hi! I'm [name]</h1>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
@@ -36,11 +36,12 @@
           </div>
         </div>
         <img
-          class="greetings__picture"
+          class="greetings__picture anim-slideInLeft"
           src="assets/pictures/frame1.png"
           alt="Me"
         />
       </section>
+      <div class="scroll-me anim-scrollMe"></div>
       <section id="projects" class="projects">
         <header class="projects__header">
           <h2>Projects</h2>
@@ -58,7 +59,7 @@
             <button class="btn-border">JavaScript</button>
           </div>
         </header>
-        <div class="projects__grid">
+        <div class="projects__grid anim-slideInBottom">
           <article class="projects__card">
             <img
               class="projects__cardImage"
@@ -127,14 +128,14 @@
           </article>
         </div>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <h2>Contact me!</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, earum!
         </p>
         <form class="contact__form">
           <div class="contact__formContent">
-            <div class="contact__formInputs">
+            <div class="contact__formInputs anim-slideInLeft">
               <input
                 type="text"
                 name="name"
@@ -155,9 +156,10 @@
               id="message"
               placeholder="Write your message..."
               required
+              class="anim-slideInRight"
             ></textarea>
           </div>
-          <button class="btn-primary">Send</button>
+          <button class="btn-primary anim-slideInBottom">Send</button>
         </form>
       </section>
     </main>

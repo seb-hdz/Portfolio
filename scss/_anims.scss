@@ -1,0 +1,114 @@
+/* Animations */
+.anim-sineFloat {
+  animation-name: sineFloat;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 750ms;
+}
+
+@keyframes sineFloat {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 0.5rem;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+.anim-scrollMe {
+  animation-name: scrollMe;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@keyframes scrollMe {
+  0% {
+    translate: 0 -1.5rem;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    translate: 0 1.5rem;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.anim-slideIn {
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-delay: 500ms;
+
+  &Top {
+    @extend .anim-slideIn;
+    animation-name: slideInTop;
+  }
+
+  &Bottom {
+    @extend .anim-slideIn;
+    animation-name: slideInBottom;
+  }
+
+  &Left {
+    @extend .anim-slideIn;
+    animation-name: slideInLeft;
+  }
+
+  &Right {
+    @extend .anim-slideIn;
+    animation-name: slideInRight;
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    translate: 0 1rem;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    translate: 0 -1rem;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    translate: -1rem 0;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    translate: 1rem 0;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,12 @@
+/* My Mixins */
+@mixin bp-max($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin bp-min($bp) {
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
