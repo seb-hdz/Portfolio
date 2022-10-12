@@ -1,0 +1,30 @@
+button,
+.btn {
+  padding-inline: 1.5rem;
+  padding-block: 0.6rem;
+  border-radius: var(--border-rad);
+  cursor: pointer;
+  transition: filter 150ms ease-in-out;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  &:active {
+    filter: brightness(90%);
+  }
+}
+
+.btn-primary {
+  background-color: var(--clr-prim);
+  border: none;
+  color: black;
+}
+
+.btn-border {
+  background-color: transparent;
+  border: 0.1rem solid white;
+  color: white;
+}

@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body>
+    <div class="dialog__overlay"></div>
+    <dialog open class="dialog">
+      <header class="dialog__header">
+        <img class="dialog__icon" src="assets/icons/ui/cross.svg" alt="" />
+      </header>
+      <div class="dialog__body">
+        <img class="dialog__image" src="https://picsum.photos/1080" alt="" />
+        <div class="dialog__content">
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad dolore
+            officiis quod perspiciatis, ipsum in unde expedita suscipit quam
+            illo libero quia, voluptas natus similique porro recusandae incidunt
+            labore pariatur. Perferendis temporibus aperiam natus dolores
+            similique quaerat eveniet consequuntur inventore porro error
+            cupiditate veniam et eum odio doloribus, minus odit?
+          </p>
+          <a href="#" class="btn btn-primary">Visit</a>
+        </div>
+      </div>
+    </dialog>
     <header>
       <a class="skip" href="#main">Jump to main content</a>
       <a class="skip" href="#footer">Jump to footer</a>
@@ -32,7 +53,7 @@
           </p>
           <div class="greetings__buttonGroup">
             <a href="#projects" class="btn btn-primary">To projects</a>
-            <a href="#" class="btn btn-border">Contact me!</a>
+            <a href="#contact" class="btn btn-border">Contact me!</a>
           </div>
         </div>
         <img

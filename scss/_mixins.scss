@@ -1,4 +1,3 @@
-/* My Mixins */
 @mixin bp-max($bp) {
   @media screen and (max-width: $bp) {
     @content;

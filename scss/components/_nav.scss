@@ -1,0 +1,37 @@
+@use "../mixins" as *;
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--clr-bg);
+  z-index: 1001;
+
+  & > ul {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-w);
+    margin-inline: auto;
+  }
+
+  & a {
+    padding-block-end: 0.25rem;
+  }
+}
+
+.nav__second {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @include bp-max(48em) {
+    display: none;
+  }
+}
+
+.active-link {
+  border-bottom: 0.125rem solid var(--clr-prim);
+}
